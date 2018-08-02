@@ -1,0 +1,18 @@
+"""
+ask
+Given a number , Return The Maximum number could be formed from the digits of the number given .
+
+Notes
+Only Positve numbers passed to the function , numbers Contain digits [1:9] inclusive  !alt !alt
+
+Digit Duplications could occur , So also consider it when forming the Largest  !alt
+
+Input >> Output Examples:
+1- maxNumber (213) ==> return (321)
+"""
+
+def max_number(n):
+  a = [int(i) for i in str(n)]
+  sortlst = sorted(a, reverse=True)
+  b = "".join(str(i) for i in sortlst)
+  return int(b)
